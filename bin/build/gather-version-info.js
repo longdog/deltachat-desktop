@@ -14,6 +14,12 @@ function gatherProcessStdout(cmd, args) {
   return stdout.toString().replace(/\n/g, '')
 }
 
+async function getPackageVersion() {
+  const packageJSON = join(__dirname, '../../package.json')
+  const packageObject = JSON.parse(await readFile(packageJSON, 'utf8'))
+  return packageObject.version
+}
+
 async function getGitRef() {
   if (process.env.VERSION_INFO_GIT_REF) {
     return process.env.VERSION_INFO_GIT_REF
@@ -35,8 +41,11 @@ async function getGitRef() {
     }
   } catch (err) {
     console.log(err)
-    console.log('Hint: you can set the env var VERSION_INFO_GIT_REF manualy')
-    process.exit(1)
+    const version = await getPackageVersion()
+    console.log(
+      `Hint: set VERSION_INFO_GIT_REF manually; using v${version}-nogit for this build`
+    )
+    return `v${version}-nogit`
   }
 
   const git_ref = git_describe + (git_branch === 'main' ? '' : '-' + git_branch)
@@ -47,10 +56,9 @@ async function getGitRef() {
  * @returns {Promise<import('@deltachat-desktop/shared/shared-types').BuildInfo>}
  */
 export async function gatherBuildInfo() {
-  const packageJSON = join(__dirname, '../../package.json')
-  const packageObject = JSON.parse(await readFile(packageJSON, 'utf8'))
+  const version = await getPackageVersion()
   return {
-    VERSION: packageObject.version,
+    VERSION: version,
     BUILD_TIMESTAMP: process.env.SOURCE_DATE_EPOCH
       ? Number(process.env.SOURCE_DATE_EPOCH) * 1000
       : Date.now(),

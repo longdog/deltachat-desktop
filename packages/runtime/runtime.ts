@@ -2,6 +2,7 @@ import {
   AutostartState,
   DcNotification,
   DcOpenWebxdcParameters,
+  AccountBootstrapConfig,
   DesktopSettingsType,
   RC_Config,
   RuntimeInfo,
@@ -116,6 +117,12 @@ export interface Runtime {
   /** return value is error (this comes from electron: TODO convert to real error) */
   openPath(path: string): Promise<string>
   getConfigPath(): string // TODO: rename -> this is for app data directory, it should include the scheme - seems to be only used for bg path right now
+
+  /**
+   * Reads `account.yaml` (Electron only): cwd, parent directories, then app
+   * config dir. Returns null if no file is found.
+   */
+  readAccountBootstrap(): Promise<AccountBootstrapConfig | null>
 
   // webxdc
   openWebxdc(msgId: number, params: DcOpenWebxdcParameters): void

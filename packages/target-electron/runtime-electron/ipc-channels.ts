@@ -32,6 +32,7 @@ export const INVOKE_CHANNELS = Object.freeze([
   'open-webxdc',
   'openIncomingVideoCallWindow',
   'openMessageHTML',
+  'read-account-bootstrap',
   'read-current-log',
   'restart_app',
   'saveBackgroundImage',

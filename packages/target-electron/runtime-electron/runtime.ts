@@ -4,6 +4,7 @@ import {
   AutostartState,
   DcNotification,
   DcOpenWebxdcParameters,
+  AccountBootstrapConfig,
   DesktopSettingsType,
   RC_Config,
   RuntimeInfo,
@@ -565,6 +566,9 @@ class ElectronRuntime implements Runtime {
   }
   getConfigPath(): string {
     return ipcBackend.sendSync('get-config-path')
+  }
+  readAccountBootstrap(): Promise<AccountBootstrapConfig | null> {
+    return ipcBackend.invoke('read-account-bootstrap')
   }
   getAutostartState(): Promise<AutostartState> {
     return ipcBackend.invoke('get-autostart-state')

@@ -68,3 +68,6 @@ default.nix
 
 # local-only dev scripts
 bin/_local/
+
+# local account bootstrap (contains credentials)
+account.yaml

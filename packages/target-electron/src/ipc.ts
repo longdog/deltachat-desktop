@@ -38,6 +38,7 @@ import * as mainWindow from './windows/main.js'
 import { openHelpWindow } from './windows/help.js'
 import { DesktopSettings } from './desktop_settings.js'
 import { getConfigPath } from './application-constants.js'
+import { readAccountBootstrapFromCwd } from './account-bootstrap.js'
 import {
   DesktopSettingsType,
   RuntimeInfo,
@@ -177,6 +178,10 @@ export async function init(cwd: string, logHandler: LogHandler) {
   })
   ipcMain.handle('read-current-log', async () => {
     return readFile(logHandler.logFilePath(), 'utf-8')
+  })
+
+  ipcMain.handle('read-account-bootstrap', async () => {
+    return readAccountBootstrapFromCwd()
   })
 
   ipcMain.on('get-config-path', ev => {

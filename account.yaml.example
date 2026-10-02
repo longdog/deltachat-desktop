@@ -1,0 +1,10 @@
+# First unconfigured start only. Searched in: process cwd, parent folders,
+# then Delta Chat config dir (~/.config/DeltaChat/account.yaml on Linux).
+email: ""
+password: ""
+imap_server: ""
+imap_port: 993
+smtp_server: ""
+smtp_port: 465
+group: ""
+invite: ""

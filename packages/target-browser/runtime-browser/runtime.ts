@@ -4,6 +4,7 @@ import {
   AutostartState,
   DcNotification,
   DcOpenWebxdcParameters,
+  AccountBootstrapConfig,
   DesktopSettingsType,
   RC_Config,
   RuntimeInfo,
@@ -872,6 +873,9 @@ class BrowserRuntime implements Runtime {
   getConfigPath(): string {
     this.log.warn('getConfigPath method does not exist in browser.')
     return ''
+  }
+  readAccountBootstrap(): Promise<AccountBootstrapConfig | null> {
+    return Promise.resolve(null)
   }
   getAutostartState(): Promise<AutostartState> {
     return Promise.resolve({

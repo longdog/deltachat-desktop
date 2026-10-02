@@ -61,7 +61,8 @@
     "@deltachat/calls-webapp": "catalog:",
     "escape-html": "^1.0.3",
     "mime-types": "catalog:",
-    "ws": "catalog:"
+    "ws": "catalog:",
+    "yaml": "^2.8.3"
   },
   "devDependencies": {
     "@deltachat-desktop/runtime-interface": "link:../runtime",

@@ -98,6 +98,18 @@ export interface DesktopSettingsType {
   appStoreBaseUrl?: string
 }
 
+/** Parsed contents of `account.yaml` for first-run account bootstrap. */
+export type AccountBootstrapConfig = {
+  email: string
+  password: string
+  imapServer: string
+  imapPort: number
+  smtpServer: string
+  smtpPort: number
+  group: string
+  invite: string
+}
+
 export interface RC_Config {
   'log-debug': boolean
   'log-to-console': boolean

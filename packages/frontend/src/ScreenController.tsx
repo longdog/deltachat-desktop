@@ -7,6 +7,8 @@ import { getLogger } from '@deltachat-desktop/shared/logger'
 import AccountSetupScreen from './components/screens/AccountSetupScreen'
 import WelcomeScreen from './components/screens/WelcomeScreen'
 import { BackendRemote, EffectfulBackendActions } from './backend-com'
+import { getConfiguredAccounts } from './backend/account'
+import { tryAccountBootstrapFromYaml } from './backend/accountBootstrap'
 import { updateDeviceChat, updateDeviceChats } from './deviceMessages'
 import { runtime } from '@deltachat-desktop/runtime-interface'
 import { updateTimestamps } from './components/conversations/Timestamp'
@@ -74,6 +76,17 @@ export default class ScreenController extends Component {
   }
 
   private async startup() {
+    const configuredAccounts = await getConfiguredAccounts()
+    if (configuredAccounts.length === 0) {
+      const bootstrapResult = await tryAccountBootstrapFromYaml()
+      if (bootstrapResult.ok) {
+        await this.selectAccount(bootstrapResult.accountId)
+        updateDeviceChats()
+        this.runPostStartupAccountMaintenance()
+        return
+      }
+    }
+
     const lastLoggedInAccountId = await this._getLastUsedAccount()
     if (lastLoggedInAccountId) {
       await this.selectAccount(lastLoggedInAccountId)
@@ -87,6 +100,10 @@ export default class ScreenController extends Component {
     }
     updateDeviceChats()
 
+    this.runPostStartupAccountMaintenance()
+  }
+
+  private runPostStartupAccountMaintenance() {
     BackendRemote.rpc.getAllAccountIds().then(accountIds => {
       for (const accountId of accountIds) {
         BackendRemote.rpc
