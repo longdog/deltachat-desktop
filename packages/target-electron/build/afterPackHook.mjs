@@ -189,14 +189,11 @@ async function setFuses(context) {
 
   // Apply security fuses for all builds
   let appPath
-  let executableName = context.packager.executableName ?? 'DeltaChat'
-  if (process.env.IS_PREVIEW) {
-    executableName = executableName + '-DevBuild'
-  }
+  const productFilename = context.packager.appInfo.productFilename
   if (isMac) {
-    appPath = `${context.appOutDir}/${executableName}.app`
+    appPath = `${context.appOutDir}/${productFilename}.app`
   } else if (context.electronPlatformName === 'win32') {
-    appPath = `${context.appOutDir}/${executableName}.exe`
+    appPath = `${context.appOutDir}/${productFilename}.exe`
   } else {
     appPath = `${context.appOutDir}/${context.packager.executableName ?? 'deltachat-desktop'}`
   }

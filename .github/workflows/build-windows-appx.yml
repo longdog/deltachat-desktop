@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:
 
 permissions: {}
 
@@ -52,7 +53,7 @@ jobs:
         run: |
           dir
           mkdir preview
-          move Delta*Chat*.exe preview/deltachat-desktop.$env:VERSION.portable.exe
+          move "deltachat-desktop.$env:VERSION.portable.exe" preview/
           dir preview
           cd ..
       # Upload Step
