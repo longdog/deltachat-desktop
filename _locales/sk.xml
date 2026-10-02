@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <!-- common strings without special context -->
-    <string name="app_name">Delta Chat</string>
+    <string name="app_name">RDT Chat</string>
     <string name="ok">OK</string>
     <string name="cancel">Zrušiť</string>
     <string name="clear_search">Zrušiť hľadanie</string>
@@ -334,7 +334,7 @@
     <string name="share_invite_link_explain">Každý, kto má tento odkaz, môže nájsť váš účet a začať s vami konverzáciu. Zdieľajte ho len s ľuďmi, ktorým dôverujete.</string>
     <string name="invite_friends">Pozvať priateľov</string>
     <!-- %1$s is replaced by the user's invitation link ("https://i.delta.chat/...") -->
-    <string name="invite_friends_text">Kontaktujte ma cez aplikáciu Delta Chat: %1$s</string>
+    <string name="invite_friends_text">Kontaktujte ma cez aplikáciu RDT Chat: %1$s</string>
     <string name="menu_copy_selection_to_clipboard">Kopírovať výber</string>
     <string name="menu_copy_link_to_clipboard">Skopírovať odkaz</string>
     <string name="menu_copy_text_to_clipboard">Kopírovať text</string>
@@ -388,7 +388,7 @@
     <string name="title_share_location">Zdieľať polohu so všetkými členmi skupiny</string>
     <string name="device_talk">Správy zariadenia</string>
     <string name="device_talk_subtitle">Správy generované lokálne</string>
-    <string name="device_talk_explain">Správy v tejto konverzácií sú generované lokálne vašou aplikáciou Delta Chat. Jeho tvorcovia ho používajú na informovanie o aktualizáciách aplikácií a problémoch počas používania.</string>
+    <string name="device_talk_explain">Správy v tejto konverzácií sú generované lokálne vašou aplikáciou RDT Chat. Jeho tvorcovia ho používajú na informovanie o aktualizáciách aplikácií a problémoch počas používania.</string>
     <string name="device_talk_welcome_message2">Skontaktujte sa!\n\n🙌 Na hlavnej obrazovke oboch zariadení klepnite na tlačidlo „QR kód“. Na jednom zariadení vyberte možnosť „Skenovať QR kód“ a nasmerujte ho na druhé zariadenie\n\n🌍 Ak nie ste v tej istej miestnosti, naskenujte kód prostredníctvom videohovoru alebo zdieľajte odkaz z obrazovky „QR pozývací kód“\n\nPotom: Vychutnajte si decentralizovaný zážitok z komunikácie. Na rozdiel od iných populárnych aplikácií tu neexistuje žiadna centrálna kontrola, sledovanie ani predaj vašich údajov, údajov vašich priateľov, kolegov či rodiny veľkým organizáciám.</string>
     <string name="edit_contact">Upraviť kontakt</string>
     <!-- Verb "to pin", making something sticky, not a noun or abbreviation for "pin number". -->
@@ -405,7 +405,7 @@
     <!-- Menu item beside an app/chat that adds an icon to the system's home screen. If the user taps that icon, the app/chat is opened directly. -->
     <string name="add_to_home_screen">Pridať na domovskú obrazovku</string>
     <string name="donate">Prispieť</string>
-    <string name="donate_device_msg">❤️ Vyzerá to, že sa vám Delta Chat páči!\n\nZvážte prosím príspevok, ktorý pomôže zabezpečiť, aby Delta Chat zostal pre všetkých zadarmo.\n\nHoci je Delta Chat zadarmo a je to projekt s otvoreným zdrojovým kódom, jeho vývoj stojí peniaze. Pomôžte nám udržať Delta Chat nezávislý a v budúcnosti ho vylepšiť ešte viac.\n\nhttps://delta.chat/donate</string>
+    <string name="donate_device_msg">❤️ Vyzerá to, že sa vám RDT Chat páči!\n\nZvážte prosím príspevok, ktorý pomôže zabezpečiť, aby RDT Chat zostal pre všetkých zadarmo.\n\nHoci je RDT Chat zadarmo a je to projekt s otvoreným zdrojovým kódom, jeho vývoj stojí peniaze. Pomôžte nám udržať RDT Chat nezávislý a v budúcnosti ho vylepšiť ešte viac.\n\nhttps://delta.chat/donate</string>
 
     <string name="mute_for_one_hour">Stlmiť na 1 hodinu</string>
     <string name="mute_for_eight_hours">Stlmiť na 8 hodín</string>
@@ -646,15 +646,15 @@
     <string name="multidevice_title">Pridať ďalšie zariadenie</string>
     <string name="multidevice_same_network_hint">Uistite sa, že obe zariadenia sú na rovnakej Wi-Fi sieti.</string>
     <string name="multidevice_this_creates_a_qr_code">Týmto spôsobom sa vytvorí QR kód, ktorý môžete naskenovať ďalším zariadením a skopírovať tak profil.\n\nUistite sa, že nasledujúcu obrazovku nemôže vidieť žiadny nežiadúci pozorovateľ ani ju nie je možné odfotografovať.</string>
-    <string name="multidevice_install_dc_on_other_device">Nainštalujte Delta Chat na vašom ďalšom zariadení (https://get.delta.chat)</string>
+    <string name="multidevice_install_dc_on_other_device">Nainštalujte RDT Chat na vašom ďalšom zariadení (https://get.delta.chat)</string>
     <!-- "I Already Have a Profile / Add as Second Device” should be the same text as defined by the keys onboarding_alternative_logins and multidevice_receiver_title -->
-    <string name="multidevice_tap_scan_on_other_device">Otvorte Delta Chat, klepnite na „Existujúci účet / Pridať ako ďalšie zariadenie„ a naskenujte zobrazený kód</string>
+    <string name="multidevice_tap_scan_on_other_device">Otvorte RDT Chat, klepnite na „Existujúci účet / Pridať ako ďalšie zariadenie„ a naskenujte zobrazený kód</string>
     <!-- Shown inside a "QR code card" with very limited space; please formulate the text as short as possible therefore. The placeholder will be replaced by the profile name eg. "Scan to set up second device for Alice" -->
     <string name="multidevice_qr_subtitle">Naskenovaním nastavíte ďalšie zariadenie pre %1$s</string>
     <string name="multidevice_receiver_title">Pridať ako ďalšie zariadenie</string>
     <string name="multidevice_open_settings_on_other_device">Na pôvodnom zariadení, choďte do „Nastavenia / Pridať ďalšie zariadenie„ a naskenujte zobrazený kód</string>
     <string name="multidevice_receiver_scanning_ask">Skopírovať účet na toto zariadenie?</string>
-    <string name="multidevice_receiver_needs_update">Účet, ktorý sa snažíte importovať bol vytvorený novšou verziou Delta Chat. Ak chcete pokračovať, aktualizujte toto zariadenie na najnovšiu verziu Delta Chat.</string>
+    <string name="multidevice_receiver_needs_update">Účet, ktorý sa snažíte importovať bol vytvorený novšou verziou RDT Chat. Ak chcete pokračovať, aktualizujte toto zariadenie na najnovšiu verziu RDT Chat.</string>
     <string name="multidevice_abort">Zrušiť pridávanie nového zariadenia?</string>
     <string name="multidevice_abort_will_invalidate_copied_qr">Toto zneplatní QR kód skopírovaný do schránky.</string>
     <string name="multidevice_transfer_done_devicemsg">ℹ️ Účet pridaný do ďalšieho zariadenia.</string>
@@ -923,14 +923,14 @@
     <string name="profile_image_delete">Odstrániť profilový obrázok</string>
     <string name="pref_show_tray_icon">Zobraziť ikonu v systémovej lište</string>
     <string name="pref_edit_profile">Upraviť účet</string>
-    <string name="send_stats_to_devs">Zasielať štatistické údaje Delta Chat vývojárom</string>
-    <string name="stats_device_message">Chcete pomôcť vylepšovať aplikáciu Delta Chat a podporiť výskum tým, že budete každý týždeň posielať anonymné štatistiky o používaní?\n\n👉 Kliknite sem… 👈</string>
-    <string name="stats_confirmation_dialog">Chcete pomôcť vylepšovať aplikáciu Delta Chat a podporiť výskum tým, že budete každý týždeň posielať anonymné štatistiky o používaní</string>
-    <string name="stats_thanks">Ďakujeme! Odosielanie môžete kedykoľvek deaktivovať v časti „Nastavenia -> Pokročilé“.\n\nMáte navyše 5 minút na to, aby ste sa zapojili do vedeckej štúdie o bezpečnosti aplikácie Delta Chat (anglicky)?</string>
+    <string name="send_stats_to_devs">Zasielať štatistické údaje RDT Chat vývojárom</string>
+    <string name="stats_device_message">Chcete pomôcť vylepšovať aplikáciu RDT Chat a podporiť výskum tým, že budete každý týždeň posielať anonymné štatistiky o používaní?\n\n👉 Kliknite sem… 👈</string>
+    <string name="stats_confirmation_dialog">Chcete pomôcť vylepšovať aplikáciu RDT Chat a podporiť výskum tým, že budete každý týždeň posielať anonymné štatistiky o používaní</string>
+    <string name="stats_thanks">Ďakujeme! Odosielanie môžete kedykoľvek deaktivovať v časti „Nastavenia -> Pokročilé“.\n\nMáte navyše 5 minút na to, aby ste sa zapojili do vedeckej štúdie o bezpečnosti aplikácie RDT Chat (anglicky)?</string>
     <string name="stats_disable_dialog">Odosielanie štatistík je už zapnuté.\n\nChcete túto funkciu vypnúť?</string>
     <string name="disable">Vypnúť</string>
     <string name="stats_keep_sending">Pokračovať v odosielaní</string>
-    <string name="stats_msg_body">Príloha obsahuje anonymné štatistiky používania, ktoré nám pomáhajú vylepšovať aplikáciu Delta Chat. Ďalšie informácie nájdete na stránke https://delta.chat/help#statssending. Ďakujeme!</string>
+    <string name="stats_msg_body">Príloha obsahuje anonymné štatistiky používania, ktoré nám pomáhajú vylepšovať aplikáciu RDT Chat. Ďalšie informácie nájdete na stránke https://delta.chat/help#statssending. Ďakujeme!</string>
 
     <!-- Emoji picker and categories -->
     <string name="emoji_search_results">Výsledky vyhľadávania</string>
@@ -962,9 +962,9 @@
     <!-- %1$d will be replaced by the number of messages, you can assume plural/lots here. %2$s will be replaced by a timespan option. -->
     <string name="autodel_device_ask">Chcete odstrániť %1$d správ a v budúcnosti aj všetky novo prevzaté správy %2$s?\n\n• Zahŕňa to všetky médiá\n\n• Správy budú odstránené bez ohľadu na to, či boli alebo neboli prečítané\n\n• „Uložené správy“ budú vynechané z lokálneho mazania</string>
     <!-- deprecated -->
-    <string name="autodel_server_ask">Chcete odstrániť %1$d správ a v budúcnosti aj všetky novo prevzaté správy %2$s?\n\n⚠️ Zahŕňa to e-maily, médiá a uložené správy vo všetkých priečinkoch na serveri\n\n⚠️ Túto funkciu nepoužívajte, ak chcete ponechať správy na serveri\n\n⚠️ Túto funkciu nepoužívajte, ak okrem Delta Chat používate aj bežných e-mailových klientov</string>
+    <string name="autodel_server_ask">Chcete odstrániť %1$d správ a v budúcnosti aj všetky novo prevzaté správy %2$s?\n\n⚠️ Zahŕňa to e-maily, médiá a uložené správy vo všetkých priečinkoch na serveri\n\n⚠️ Túto funkciu nepoužívajte, ak chcete ponechať správy na serveri\n\n⚠️ Túto funkciu nepoužívajte, ak okrem RDT Chat používate aj bežných e-mailových klientov</string>
     <!-- deprecated -->
-    <string name="autodel_server_enabled_hint">Zahŕňa to e-maily, médiá a uložené správy vo všetkých priečinkoch na serveri. Túto funkciu nepoužívajte, ak chcete ponechať správy na serveri alebo ak okrem Delta Chat používate aj bežných e-mailových klientov.</string>
+    <string name="autodel_server_enabled_hint">Zahŕňa to e-maily, médiá a uložené správy vo všetkých priečinkoch na serveri. Túto funkciu nepoužívajte, ak chcete ponechať správy na serveri alebo ak okrem RDT Chat používate aj bežných e-mailových klientov.</string>
     <!-- deprecated -->
     <string name="autodel_server_warn_multi_device_title">Zapnúť vymazanie všetkého naraz</string>
     <!-- deprecated -->
@@ -1074,7 +1074,7 @@
     <string name="devicemsg_storage_exceeding">⚠️ Úložisko vašeho poskytovateľa čoskoro prekročí limit, už%1$s%% sú využité.\n\n Je možné, že nebudete môcť prijímať správy, ak bude úložisko 100 %% využité.\n\n👉 Prosím skontrolujte, či môžete vo webovom rozhraní poskytovateľa vymazať staré údaje, a zvážte aktiváciu „Nastavenia / Odstrániť Staré Správy“. Aktuálne využitie úložiska si môžete kedykoľvek skontrolovať v časti „Nastavenia / Pripojenie“. </string>
     <!-- %1%s will be replaced by date and time in some human-readable format -->
     <string name="devicemsg_bad_time">Zdá sa, že dátum alebo čas vášho zariadenia je nepresný (%1$s).\n\nNastavte si hodiny ⏰🔧, aby ste zaistili bezproblémové prijímanie správ. </string>
-    <string name="devicemsg_update_reminder">⚠️ Vaša verzia aplikácie Delta Chat môže byť zastaraná.\n\nMôže to spôsobiť problémy, pretože vaši konverzačný partneri používajú novšie verzie – a vám chýbajú najnovšie funkcie 😳\nAktualizácie nájdete na https://get.delta.chat alebo v obchode s aplikáciami.</string>
+    <string name="devicemsg_update_reminder">⚠️ Vaša verzia aplikácie RDT Chat môže byť zastaraná.\n\nMôže to spôsobiť problémy, pretože vaši konverzačný partneri používajú novšie verzie – a vám chýbajú najnovšie funkcie 😳\nAktualizácie nájdete na https://get.delta.chat alebo v obchode s aplikáciami.</string>
 
     <!-- Some options as "Add Second Device" or "Backup" may require the system PIN/Fingerprint/Gesture/Etc. to be entered in a system dialog. This hint is added to the system dialog, below a title as "Add Second Device" or "Backup". -->
     <string name="enter_system_secret_to_continue">Pokračujte odomknutím.</string>
@@ -1159,7 +1159,7 @@
 
     <!-- location streaming -->
     <string name="location_streaming_notification_text">Zdieľate svoju polohu</string>
-    <string name="location_rationale">Ak chcete zdieľať svoju aktuálnu polohu s ostatnými, povoľte aplikácii Delta Chat pristupovať k údajom o vašej polohe.\n\nAby funkcia zdieľania aktuálnej polohy fungovala bez prerušenia, údaje o polohe sa využívajú aj vtedy, keď je aplikácia zatvorená alebo beží na pozadí.</string>
+    <string name="location_rationale">Ak chcete zdieľať svoju aktuálnu polohu s ostatnými, povoľte aplikácii RDT Chat pristupovať k údajom o vašej polohe.\n\nAby funkcia zdieľania aktuálnej polohy fungovala bez prerušenia, údaje o polohe sa využívajú aj vtedy, keď je aplikácia zatvorená alebo beží na pozadí.</string>
 
     <!-- permissions -->
     <string name="perm_required_title">Vyžaduje sa povolenie</string>
@@ -1169,7 +1169,7 @@
     <string name="perm_explain_access_to_mic_denied">Ak chcete odosielať zvukové správy, prejdite do nastavení aplikácie, klepnite na „Povolenia“ a začiarknite „Mikrofón“.</string>
     <string name="perm_explain_access_to_storage_denied">Ak chcete prijímať alebo odosielať súbory, prejdite do nastavení aplikácie, klepnite na „Povolenia“ a začiarknite „Úložisko“.</string>
     <string name="perm_explain_access_to_location_denied">Ak chcete zdieľať polohu, prejdite do nastavení aplikácie, klepnite na „Povolenia“ a začiarknite „Poloha“.</string>
-    <string name="perm_explain_access_to_notifications_denied">Ak chcete dostávať upozornenia, prejdite do aplikácie Nastavenia / Aplikácie / Delta Chat“ a povoľte „Upozornenia“.</string>
+    <string name="perm_explain_access_to_notifications_denied">Ak chcete dostávať upozornenia, prejdite do aplikácie Nastavenia / Aplikácie / RDT Chat“ a povoľte „Upozornenia“.</string>
     <!-- ImageEditorHud -->
     <string name="ImageEditorHud_draw_anywhere_to_blur">Rozmazať môžete kreslením kamkoľvek</string>
     <string name="ImageEditorHud_add_text">Pridať text</string>
@@ -1180,7 +1180,7 @@
     <string name="ImageEditorHud_flip">Prevrátiť</string>
     <string name="ImageEditorHud_rotate">Otočiť</string>
 
-    <string name="welcome_desktop">Víta vás Delta Chat</string>
+    <string name="welcome_desktop">Víta vás RDT Chat</string>
     <string name="global_menu_preferences_language_desktop">Jazyk</string>
     <string name="global_menu_file_desktop">Súbor</string>
     <string name="global_menu_file_quit_desktop">Skončiť</string>
@@ -1195,11 +1195,11 @@
     <string name="global_menu_view_developer_desktop">Vývojár</string>
     <string name="global_menu_view_developer_tools_desktop">Nástroje pre vývojárov</string>
     <string name="global_menu_help_desktop">Pomocník</string>
-    <string name="delta_chat_homepage">Stránka Delta Chat</string>
+    <string name="delta_chat_homepage">Stránka RDT Chat</string>
     <string name="contribute">Prispieť</string>
     <string name="global_menu_help_report_desktop">Nahlásiť problém</string>
-    <string name="global_menu_help_about_desktop">O aplikácii Delta Chat</string>
-    <string name="global_menu_file_open_desktop">Otvoriť Delta Chat</string>
+    <string name="global_menu_help_about_desktop">O aplikácii RDT Chat</string>
+    <string name="global_menu_file_open_desktop">Otvoriť RDT Chat</string>
     <string name="global_menu_minimize_to_tray">Minimalizovať</string>
     <string name="no_account_selected">Vyberte účet, alebo si vytvorte nový</string>
     <string name="no_chat_selected_suggestion_desktop">Vyberte konverzáciu alebo začnite novú</string>
@@ -1219,11 +1219,11 @@
     <string name="message_detail_received_desktop">prijaté</string>
     <string name="menu.view.developer.open.log.folder">Otvoriť priečinok so záznamom</string>
     <string name="menu.view.developer.open.current.log.file">Otvoriť aktuálny súbor so záznamom</string>
-    <string name="explain_desktop_minimized_disabled_tray_pref" tools:ignore="TypographyDashes">Ikonu v systémovej lište nie je možné deaktivovať, pretože Delta Chat bol spustený s prepínačom --minimized.</string>
+    <string name="explain_desktop_minimized_disabled_tray_pref" tools:ignore="TypographyDashes">Ikonu v systémovej lište nie je možné deaktivovať, pretože RDT Chat bol spustený s prepínačom --minimized.</string>
     <!-- deprecated, used on desktop although there is not spell checker -->
     <string name="no_spellcheck_suggestions_found">Neboli nájdené žiadne návrhy kontroly pravopisu.</string>
     <string name="show_window">Zobraziť okno</string>
-    <string name="data_found_other_installation_message">Vaše účty z inej inštalácie aplikácie Delta Chat nie sú k dispozícii – jednotlivé inštalácie ukladajú svoje údaje na rôznych miestach.\n\nAk si chcete zachovať existujúce profily:\n1. Teraz ukončite aplikáciu\n2. Otvorte druhú inštaláciu aplikácie Delta Chat – v prípade potreby ju preinštalujte z %1$s\n3. Zálohujte každý profil v časti „Nastavenia/Konverzácie“\n4. Znovu spustite túto verziu\n5. Obnovte zálohy pomocou možnosti „Existujúci účet“\n\nChcete pokračovať bez predchádzajúcich účtov?</string>
+    <string name="data_found_other_installation_message">Vaše účty z inej inštalácie aplikácie RDT Chat nie sú k dispozícii – jednotlivé inštalácie ukladajú svoje údaje na rôznych miestach.\n\nAk si chcete zachovať existujúce profily:\n1. Teraz ukončite aplikáciu\n2. Otvorte druhú inštaláciu aplikácie RDT Chat – v prípade potreby ju preinštalujte z %1$s\n3. Zálohujte každý profil v časti „Nastavenia/Konverzácie“\n4. Znovu spustite túto verziu\n5. Obnovte zálohy pomocou možnosti „Existujúci účet“\n\nChcete pokračovať bez predchádzajúcich účtov?</string>
 
     <!-- title of the "keybindings" dialog (for the keybindings names as such, where possible the normal command strings are used) -->
     <string name="keybindings">Klávesové skratky</string>
@@ -1269,7 +1269,7 @@
     <string name="import_device_contacts">Importovať kontakty zo zariadenia</string>
     <string name="import_device_contacts_hint">Ak chcete konverzovať s kontaktmi uloženými vo vašom zariadení, otvorte Nastavenia a povoľte Kontakty.</string>
     <!-- iOS notification settings -->
-    <string name="disabled_in_dc">Vypnuté v aplikácii Delta Chat</string>
+    <string name="disabled_in_dc">Vypnuté v aplikácii RDT Chat</string>
     <string name="disabled_in_system_settings">Vypnuté v nastaveniach systému</string>
     <string name="bg_app_refresh_disabled">\"Obnovenie aplikácie na pozadí\" vypnuté v nastaveniach systému</string>
     <string name="notifications_avg_minutes">V priemere každých %1$d minút</string>
@@ -1282,13 +1282,13 @@
     <!-- use the same translation for "Shortcuts" as the system is using, often the term "Shortcut" stays untranslated; check eg. how the "Shortcuts" system app is called in your locale -->
     <string name="shortcuts_widget_title">Skratky</string>
     <!-- iOS permissions, copy from "deltachat-ios/Info.plist", which is used on missing translations in "deltachat-ios/LANG.lproj/InfoPlist.strings" -->
-    <string name="InfoPlist_NSCameraUsageDescription">Delta Chat používa váš fotoaparát na snímanie a odosielanie fotografií a videí a na skenovanie QR kódov.</string>
-    <string name="InfoPlist_NSLocationAlwaysAndWhenInUseUsageDescription">Delta Chat vyžaduje oprávnenie na získanie polohy, aby ste mohli zdieľať Vašu polohu v intervale, ktorý ste si nastavili.</string>
-    <string name="InfoPlist_NSLocationWhenInUseUsageDescription">Delta Chat vyžaduje oprávnenia na zdieľanie vašej polohy počas doby, kým bude zdieľanie polohy aktívne.</string>
-    <string name="InfoPlist_NSMicrophoneUsageDescription">Aplikácia Delta Chat používa váš mikrofón na zaznamenávanie a odosielanie hlasových správ a videí so zvukom.</string>
-    <string name="InfoPlist_NSPhotoLibraryUsageDescription">Delta Chat vám umožní zvoliť si, ktoré fotografie z vašej knižnice chcete odoslať.</string>
-    <string name="InfoPlist_NSPhotoLibraryAddUsageDescription">Delta Chat chce uložiť obrázky do vašej knižnice fotografií.</string>
-    <string name="InfoPlist_NSFaceIDUsageDescription">Aplikácia Delta Chat môže využívať funkciu Face ID na ochranu vášho účtu, vytváranie záloh a nastavenie druhého zariadenia.</string>
+    <string name="InfoPlist_NSCameraUsageDescription">RDT Chat používa váš fotoaparát na snímanie a odosielanie fotografií a videí a na skenovanie QR kódov.</string>
+    <string name="InfoPlist_NSLocationAlwaysAndWhenInUseUsageDescription">RDT Chat vyžaduje oprávnenie na získanie polohy, aby ste mohli zdieľať Vašu polohu v intervale, ktorý ste si nastavili.</string>
+    <string name="InfoPlist_NSLocationWhenInUseUsageDescription">RDT Chat vyžaduje oprávnenia na zdieľanie vašej polohy počas doby, kým bude zdieľanie polohy aktívne.</string>
+    <string name="InfoPlist_NSMicrophoneUsageDescription">Aplikácia RDT Chat používa váš mikrofón na zaznamenávanie a odosielanie hlasových správ a videí so zvukom.</string>
+    <string name="InfoPlist_NSPhotoLibraryUsageDescription">RDT Chat vám umožní zvoliť si, ktoré fotografie z vašej knižnice chcete odoslať.</string>
+    <string name="InfoPlist_NSPhotoLibraryAddUsageDescription">RDT Chat chce uložiť obrázky do vašej knižnice fotografií.</string>
+    <string name="InfoPlist_NSFaceIDUsageDescription">Aplikácia RDT Chat môže využívať funkciu Face ID na ochranu vášho účtu, vytváranie záloh a nastavenie druhého zariadenia.</string>
 
     <!-- android specific strings, developers: please take care to remove strings that are no longer used! -->
     <string name="pref_instant_delivery">Okamžité doručovanie</string>
@@ -1297,9 +1297,9 @@
     <string name="pref_reliable_service">Vynútiť pripojenie na pozadí</string>
     <string name="pref_reliable_service_explain">Zobrazí trvalé upozornenie</string>
 
-    <string name="pref_background_notifications_rationale">Ak chcete zachovať pripojenie k svojmu e-mailovému serveru a prijímať správy na pozadí, v ďalšom kroku ignorujte optimalizáciu batérie. \n\nDelta Chat využíva málo zdrojov a dbá na to, aby sa batéria nevybíjala.</string>
+    <string name="pref_background_notifications_rationale">Ak chcete zachovať pripojenie k svojmu e-mailovému serveru a prijímať správy na pozadí, v ďalšom kroku ignorujte optimalizáciu batérie. \n\nRDT Chat využíva málo zdrojov a dbá na to, aby sa batéria nevybíjala.</string>
     <!-- disabling "Reliable service" will hide a the maybe annoying permanent-notification with the drawback that new-message-notifications get potentially unreliable -->
-    <string name="perm_enable_bg_reminder_title">Klepnutím sem prijmete správy, zatiaľ čo je Delta Chat na pozadí.</string>
-    <string name="perm_enable_bg_already_done">Aplikácii Delta Chat ste už povolili príjem správ na pozadí.\n\nAk správy stále neprichádzajú na pozadí, skontrolujte tiež nastavenia systému.</string>
+    <string name="perm_enable_bg_reminder_title">Klepnutím sem prijmete správy, zatiaľ čo je RDT Chat na pozadí.</string>
+    <string name="perm_enable_bg_already_done">Aplikácii RDT Chat ste už povolili príjem správ na pozadí.\n\nAk správy stále neprichádzajú na pozadí, skontrolujte tiež nastavenia systému.</string>
 
     </resources>

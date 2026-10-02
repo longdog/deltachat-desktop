@@ -1,4 +1,4 @@
-export const appName = 'Delta Chat'
+export const appName = 'RDT Chat'
 export const homePageUrl = 'https://delta.chat'
 export const gitHubUrl = 'https://github.com/deltachat/deltachat-desktop'
 export const gitHubIssuesUrl = `${gitHubUrl}/issues`

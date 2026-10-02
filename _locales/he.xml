@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <!-- common strings without special context -->
-    <string name="app_name">Delta Chat</string>
+    <string name="app_name">RDT Chat</string>
     <string name="ok">בסדר</string>
     <string name="cancel">ביטול</string>
     <string name="clear_search">נקה את החיפוש</string>
@@ -323,7 +323,7 @@
     <string name="share_invite_link_explain">כל מי שיש לו את הקישור הזה יכול לצפות בפרופיל שלך ולפתוח איתך בצ\'אט. שתף אותו רק עם אנשים שאתה בוטח בהם.</string>
     <string name="invite_friends">הזמן חברים</string>
     <!-- %1$s is replaced by the user's invitation link ("https://i.delta.chat/...") -->
-    <string name="invite_friends_text">צרו איתי קשר ב- Delta Chat :\n%1$s</string>
+    <string name="invite_friends_text">צרו איתי קשר ב- RDT Chat :\n%1$s</string>
     <string name="menu_copy_selection_to_clipboard">העתק את הבחירה</string>
     <string name="menu_copy_link_to_clipboard">העתק קישור</string>
     <string name="menu_copy_text_to_clipboard">העתק טקסט</string>
@@ -394,7 +394,7 @@
     <!-- Menu item beside an app/chat that adds an icon to the system's home screen. If the user taps that icon, the app/chat is opened directly. -->
     <string name="add_to_home_screen">הוסף למסך הבית</string>
     <string name="donate">לתרום</string>
-    <string name="donate_device_msg">❤️ נראה שאתם נהנים מ-Delta Chat!\n\nאנא שקלו לתרום כדי לעזור להבטיח ש-Delta Chat יישאר חינמי לכולם.\n\nאמנם השימוש ב-Delta Chat הוא חינמי והוא מבוסס קוד פתוח, אך הפיתוח עולה כסף. עזרו לנו לשמור על עצמאותו של Delta Chat ולהפוך אותו למדהים עוד יותר בעתיד.\n\nhttps://delta.chat/donate</string>
+    <string name="donate_device_msg">❤️ נראה שאתם נהנים מ-RDT Chat!\n\nאנא שקלו לתרום כדי לעזור להבטיח ש-RDT Chat יישאר חינמי לכולם.\n\nאמנם השימוש ב-RDT Chat הוא חינמי והוא מבוסס קוד פתוח, אך הפיתוח עולה כסף. עזרו לנו לשמור על עצמאותו של RDT Chat ולהפוך אותו למדהים עוד יותר בעתיד.\n\nhttps://delta.chat/donate</string>
 
     <string name="mute_for_one_hour">השתקה למשך שעה</string>
     <string name="mute_for_eight_hours">השתקה למשך 8 שעות</string>
@@ -629,15 +629,15 @@
     <string name="multidevice_title">הוסף מכשיר שני</string>
     <string name="multidevice_same_network_hint">ודא ששני המכשירים מחוברים לאותה רשת Wi-Fi או לאותה רשת</string>
     <string name="multidevice_this_creates_a_qr_code">פעולה זו יוצרת קוד QR שהמכשיר השני יכול לסרוק כדי להעתיק את הפרופיל.\n\nיש לוודא שאף צופה או מצלמה לא רצויים לא יוכלו לראות את המסך הבא.</string>
-    <string name="multidevice_install_dc_on_other_device">התקן את Delta Chat במכשיר הנוסף שלך (https://get.delta.chat)</string>
+    <string name="multidevice_install_dc_on_other_device">התקן את RDT Chat במכשיר הנוסף שלך (https://get.delta.chat)</string>
     <!-- "I Already Have a Profile / Add as Second Device” should be the same text as defined by the keys onboarding_alternative_logins and multidevice_receiver_title -->
-    <string name="multidevice_tap_scan_on_other_device">הפעל את Delta Chat, הקש על \"כבר יש לי פרופיל / הוסף כמכשיר שני\" וסרוק את הקוד המוצג כאן</string>
+    <string name="multidevice_tap_scan_on_other_device">הפעל את RDT Chat, הקש על \"כבר יש לי פרופיל / הוסף כמכשיר שני\" וסרוק את הקוד המוצג כאן</string>
     <!-- Shown inside a "QR code card" with very limited space; please formulate the text as short as possible therefore. The placeholder will be replaced by the profile name eg. "Scan to set up second device for Alice" -->
     <string name="multidevice_qr_subtitle">סרוק כדי להגדיר מכשיר שני עבור %1$s</string>
     <string name="multidevice_receiver_title">הוסף כמכשיר שני</string>
-    <string name="multidevice_open_settings_on_other_device">במכשיר הראשון, הפעל את Delta Chat, עבור ל\"הגדרות / הוסף מכשיר שני\" וסרוק את הקוד המוצג שם</string>
+    <string name="multidevice_open_settings_on_other_device">במכשיר הראשון, הפעל את RDT Chat, עבור ל\"הגדרות / הוסף מכשיר שני\" וסרוק את הקוד המוצג שם</string>
     <string name="multidevice_receiver_scanning_ask">להעתיק את הפרופיל מהמכשיר האחר למכשיר זה?</string>
-    <string name="multidevice_receiver_needs_update">הפרופיל שברצונך לייבא הוא מגרסה חדשה יותר של Delta Chat.\n\nכדי להמשיך בהגדרת המכשיר השני, אנא עדכן מכשיר זה לגרסה העדכנית ביותר של Delta Chat.</string>
+    <string name="multidevice_receiver_needs_update">הפרופיל שברצונך לייבא הוא מגרסה חדשה יותר של RDT Chat.\n\nכדי להמשיך בהגדרת המכשיר השני, אנא עדכן מכשיר זה לגרסה העדכנית ביותר של RDT Chat.</string>
     <string name="multidevice_abort">לבטל את הגדרת המכשיר השני?</string>
     <string name="multidevice_abort_will_invalidate_copied_qr">פעולה זו תבטל את תוקפו של קוד ה-QR שהועתק ללוח.</string>
     <string name="multidevice_transfer_done_devicemsg">ℹ️ הפרופיל הועבר למכשיר השני שלך.</string>
@@ -906,14 +906,14 @@
     <string name="profile_image_delete">מחק תמונת פרופיל</string>
     <string name="pref_show_tray_icon">הצג סמל במגש המערכת</string>
     <string name="pref_edit_profile">ערוך פרופיל</string>
-    <string name="send_stats_to_devs">שלח נתונים סטטיסטיים למפתחי Delta Chat</string>
-    <string name="stats_device_message">האם ברצונך לסייע בשיפור Delta Chat ולתמוך במחקר באמצעות שליחת נתוני שימוש אנונימיים מדי שבוע?\n\n👉 הקש כאן… 👈</string>
-    <string name="stats_confirmation_dialog">האם ברצונך לסייע בשיפור Delta Chat ולתמוך במחקר באמצעות שליחת נתוני שימוש אנונימיים מדי שבוע?</string>
+    <string name="send_stats_to_devs">שלח נתונים סטטיסטיים למפתחי RDT Chat</string>
+    <string name="stats_device_message">האם ברצונך לסייע בשיפור RDT Chat ולתמוך במחקר באמצעות שליחת נתוני שימוש אנונימיים מדי שבוע?\n\n👉 הקש כאן… 👈</string>
+    <string name="stats_confirmation_dialog">האם ברצונך לסייע בשיפור RDT Chat ולתמוך במחקר באמצעות שליחת נתוני שימוש אנונימיים מדי שבוע?</string>
     <string name="stats_thanks">תודה! תמיד תוכל להשבית את שליחת ההודעות ב\"הגדרות -> מתקדם\".\n\nהאם יש לך עוד 5 דקות להשתתף במחקר מדעי בנושא אבטחת דלתא צ\'אט?</string>
     <string name="stats_disable_dialog">שליחת הנתונים הסטטיסטיים כבר מופעלת.\n\nהאם ברצונך להשבית אותה?</string>
     <string name="disable">השבת</string>
     <string name="stats_keep_sending">המשך לשלוח</string>
-    <string name="stats_msg_body">הקובץ המצורף מכיל נתוני שימוש אנונימיים, המסייעים לנו לשפר את Delta Chat. למידע נוסף, בקרו בכתובת https://delta.chat/help#statssending. תודה!</string>
+    <string name="stats_msg_body">הקובץ המצורף מכיל נתוני שימוש אנונימיים, המסייעים לנו לשפר את RDT Chat. למידע נוסף, בקרו בכתובת https://delta.chat/help#statssending. תודה!</string>
 
     <!-- Emoji picker and categories -->
     <string name="emoji_search_results">תוצאות חיפוש</string>
@@ -1057,7 +1057,7 @@
     <string name="devicemsg_storage_exceeding">⚠️ שטח האחסון של הספק שלך עומד להיגמר: %1$s%% כבר בשימוש.\n\nייתכן שלא תוכל לקבל הודעות אם שטח האחסון מלא.\n\n👉 אנא בדוק אם ניתן למחוק נתונים ישנים בממשק האינטרנט של הספק ושקול להפעיל את האפשרות \"הגדרות / צ\'אטים / מחיקת הודעות ישנות\". תוכל לבדוק את השימוש הנוכחי בשטח האחסון בכל עת ב\"הגדרות / קישוריות\".</string>
     <!-- %1%s will be replaced by date and time in some human-readable format -->
     <string name="devicemsg_bad_time">⚠️ נראה כי התאריך או השעה במכשיר שלך אינם מדויקים (%1$s).\n\nכוון את השעון שלך ⏰🔧 כדי להבטיח שההודעות שלך יתקבלו כהלכה.</string>
-    <string name="devicemsg_update_reminder">⚠️ ייתכן שגרסת Delta Chat שברשותך אינה מעודכנת.\n\nדבר זה עלול לגרום לבעיות, מכיוון שהשותפים שלך לצ\'אט משתמשים בגרסאות חדשות יותר – ואתה מפספס את התכונות העדכניות ביותר 😳\nאנא בדוק באתר https://get.delta.chat או בחנות האפליקציות שלך אם יש עדכונים.</string>
+    <string name="devicemsg_update_reminder">⚠️ ייתכן שגרסת RDT Chat שברשותך אינה מעודכנת.\n\nדבר זה עלול לגרום לבעיות, מכיוון שהשותפים שלך לצ\'אט משתמשים בגרסאות חדשות יותר – ואתה מפספס את התכונות העדכניות ביותר 😳\nאנא בדוק באתר https://get.delta.chat או בחנות האפליקציות שלך אם יש עדכונים.</string>
 
     <!-- Some options as "Add Second Device" or "Backup" may require the system PIN/Fingerprint/Gesture/Etc. to be entered in a system dialog. This hint is added to the system dialog, below a title as "Add Second Device" or "Backup". -->
     <string name="enter_system_secret_to_continue">הסר את הנעילה כדי להמשיך</string>
@@ -1144,7 +1144,7 @@
 
     <!-- location streaming -->
     <string name="location_streaming_notification_text">אתה משתף את המיקום שלך</string>
-    <string name="location_rationale">כדי לשתף את המיקום הנוכחי שלך עם משתתפי הצ\'אט, אפשר ל-Delta Chat להשתמש בנתוני המיקום שלך.\n\nכדי שהמיקום הנוכחי יפעל ללא הפרעה, נתוני המיקום משמשים גם כשהאפליקציה סגורה או שאינה בשימוש.</string>
+    <string name="location_rationale">כדי לשתף את המיקום הנוכחי שלך עם משתתפי הצ\'אט, אפשר ל-RDT Chat להשתמש בנתוני המיקום שלך.\n\nכדי שהמיקום הנוכחי יפעל ללא הפרעה, נתוני המיקום משמשים גם כשהאפליקציה סגורה או שאינה בשימוש.</string>
 
     <!-- permissions -->
     <string name="perm_required_title">נדרשת הרשאה</string>
@@ -1154,7 +1154,7 @@
     <string name="perm_explain_access_to_mic_denied">כדי לשלוח הודעות קוליות, היכנס להגדרות המערכת או לאפליקציה, בחר ב\"הרשאות\" או ב\"פרטיות &amp; אבטחה\", והפעל את \"מיקרופון\".</string>
     <string name="perm_explain_access_to_storage_denied">כדי לקבל או לשלוח קבצים, היכנס להגדרות האפליקציה, בחר \"הרשאות\" והפעל את \"אחסון\".</string>
     <string name="perm_explain_access_to_location_denied">כדי להפעיל את זיהוי המיקום, היכנס להגדרות האפליקציה, בחר \"הרשאות\" והפעל את \"מיקום\".</string>
-    <string name="perm_explain_access_to_notifications_denied">כדי לקבל התראות, היכנס ל\"הגדרות מערכת / אפליקציות / Delta Chat\" והפעל את האפשרות \"התראות\".</string>
+    <string name="perm_explain_access_to_notifications_denied">כדי לקבל התראות, היכנס ל\"הגדרות מערכת / אפליקציות / RDT Chat\" והפעל את האפשרות \"התראות\".</string>
     <!-- ImageEditorHud -->
     <string name="ImageEditorHud_draw_anywhere_to_blur">צייר בכל מקום כדי לטשטש</string>
     <string name="ImageEditorHud_add_text">הוסף טקסט</string>
@@ -1165,7 +1165,7 @@
     <string name="ImageEditorHud_flip">הפוך</string>
     <string name="ImageEditorHud_rotate">סובב</string>
 
-    <string name="welcome_desktop">ברוכים הבאים ל- Delta Chat</string>
+    <string name="welcome_desktop">ברוכים הבאים ל- RDT Chat</string>
     <string name="global_menu_preferences_language_desktop">שפה</string>
     <string name="global_menu_file_desktop">קובץ</string>
     <string name="global_menu_file_quit_desktop">יציאה</string>
@@ -1180,11 +1180,11 @@
     <string name="global_menu_view_developer_desktop">מפתח</string>
     <string name="global_menu_view_developer_tools_desktop">כלי מפתחים</string>
     <string name="global_menu_help_desktop">עזרה</string>
-    <string name="delta_chat_homepage">דף הבית של Delta Chat</string>
+    <string name="delta_chat_homepage">דף הבית של RDT Chat</string>
     <string name="contribute">תרום</string>
     <string name="global_menu_help_report_desktop">דווח על בעיה</string>
-    <string name="global_menu_help_about_desktop">אודות Delta Chat</string>
-    <string name="global_menu_file_open_desktop">פתח את Delta Chat</string>
+    <string name="global_menu_help_about_desktop">אודות RDT Chat</string>
+    <string name="global_menu_file_open_desktop">פתח את RDT Chat</string>
     <string name="global_menu_minimize_to_tray">צמצם</string>
     <string name="no_account_selected">בחר פרופיל או צור פרופיל חדש</string>
     <string name="no_chat_selected_suggestion_desktop">בחר צ\'אט או צור צ\'אט חדש</string>
@@ -1208,7 +1208,7 @@
     <!-- deprecated, used on desktop although there is not spell checker -->
     <string name="no_spellcheck_suggestions_found">לא נמצאו הצעות לאיות.</string>
     <string name="show_window">הצג חלון</string>
-    <string name="data_found_other_installation_message">לא ניתן לגשת לפרופילים שלך מהתקנה אחרת של Delta Chat – התקנות שונות מאחסנות את הנתונים שלהן במיקומים נפרדים.\n\nכדי לשמור על הפרופילים הקיימים:\n1. צאו מהתוכנה כעת\n2. פתחו את Delta Chat האחר — במידת הצורך, התקינו אותו מחדש מ- %1$s\n3. גבו כל פרופיל תחת \"הגדרות/צ\'אטים\"\n4. הפעל מחדש את הגרסה הזו\n5. שחזרו את הגיבויים באמצעות \"כבר יש לי פרופיל\"\n\nהאם ברצונכם להמשיך ללא הפרופילים הקודמים שלכם?</string>
+    <string name="data_found_other_installation_message">לא ניתן לגשת לפרופילים שלך מהתקנה אחרת של RDT Chat – התקנות שונות מאחסנות את הנתונים שלהן במיקומים נפרדים.\n\nכדי לשמור על הפרופילים הקיימים:\n1. צאו מהתוכנה כעת\n2. פתחו את RDT Chat האחר — במידת הצורך, התקינו אותו מחדש מ- %1$s\n3. גבו כל פרופיל תחת \"הגדרות/צ\'אטים\"\n4. הפעל מחדש את הגרסה הזו\n5. שחזרו את הגיבויים באמצעות \"כבר יש לי פרופיל\"\n\nהאם ברצונכם להמשיך ללא הפרופילים הקודמים שלכם?</string>
 
     <!-- title of the "keybindings" dialog (for the keybindings names as such, where possible the normal command strings are used) -->
     <string name="keybindings">קיצורי מקשים</string>
@@ -1254,7 +1254,7 @@
     <string name="import_device_contacts">יבוא אנשי קשר מהמכשיר</string>
     <string name="import_device_contacts_hint">כדי לשוחח בצ\'אט עם אנשי הקשר מהמכשיר שלך, פתח את \"הגדרות\" והפעל את האפשרות \"אנשי קשר\".</string>
     <!-- iOS notification settings -->
-    <string name="disabled_in_dc">מושבת ב- Delta Chat</string>
+    <string name="disabled_in_dc">מושבת ב- RDT Chat</string>
     <string name="disabled_in_system_settings">מושבת בהגדרות המערכת</string>
     <string name="bg_app_refresh_disabled">\"רענון אפליקציות ברקע\" מושבת בהגדרות המערכת</string>
     <string name="notifications_avg_minutes">בממוצע, כל %1$d דקות</string>
@@ -1267,19 +1267,19 @@
     <!-- use the same translation for "Shortcuts" as the system is using, often the term "Shortcut" stays untranslated; check eg. how the "Shortcuts" system app is called in your locale -->
     <string name="shortcuts_widget_title">קיצורי דרך</string>
     <!-- use the same translation for "Widget" as the system is using; often the term "Widget" stays untranslated -->
-    <string name="shortcuts_widget_description">השתמש באפשרות \"הוסף לווידג\'ט\" ב- Delta Chat כדי להוסיף פריטים</string>
+    <string name="shortcuts_widget_description">השתמש באפשרות \"הוסף לווידג\'ט\" ב- RDT Chat כדי להוסיף פריטים</string>
     <!-- use the same translation for "Widget" as the system is using; often the term "Widget" stays untranslated -->
     <string name="remove_from_widget">הסר מהווידג\'ט</string>
     <!-- use the same translation for "Widget" as the system is using; often the term "Widget" stays untranslated -->
     <string name="add_to_widget">הוסף לווידג\'ט</string>
     <!-- iOS permissions, copy from "deltachat-ios/Info.plist", which is used on missing translations in "deltachat-ios/LANG.lproj/InfoPlist.strings" -->
-    <string name="InfoPlist_NSCameraUsageDescription">Delta Chat משתמשת במצלמה שלך לצילום ושליחת תמונות וסרטונים, וכן לסריקת קודי QR.</string>
-    <string name="InfoPlist_NSLocationAlwaysAndWhenInUseUsageDescription">Delta Chat זקוקה להרשאה לשתף את המיקום שלך למשך הזמן שבו הפכת את שיתוף המיקום לזמין.</string>
-    <string name="InfoPlist_NSLocationWhenInUseUsageDescription">Delta Chat זקוקה להרשאה לשתף את המיקום שלך למשך הזמן שבו הפכת את שיתוף המיקום לזמין.</string>
-    <string name="InfoPlist_NSMicrophoneUsageDescription">Delta Chat משתמשת במיקרופון שלך כדי להקליט ולשלוח הודעות קוליות וסרטונים עם סאונד.</string>
-    <string name="InfoPlist_NSPhotoLibraryUsageDescription">Delta Chat תאפשר לכם לבחור אילו תמונות מהספרייה שלכם לשלוח.</string>
-    <string name="InfoPlist_NSPhotoLibraryAddUsageDescription">Delta Chat מבקש לשמור תמונות בספריית התמונות שלך.</string>
-    <string name="InfoPlist_NSFaceIDUsageDescription">Delta Chat יכולה להשתמש ב-Face ID כדי להגן על הפרופיל המקומי שלך, על יצירת הגיבוי ועל הגדרת המכשיר השני.</string>
+    <string name="InfoPlist_NSCameraUsageDescription">RDT Chat משתמשת במצלמה שלך לצילום ושליחת תמונות וסרטונים, וכן לסריקת קודי QR.</string>
+    <string name="InfoPlist_NSLocationAlwaysAndWhenInUseUsageDescription">RDT Chat זקוקה להרשאה לשתף את המיקום שלך למשך הזמן שבו הפכת את שיתוף המיקום לזמין.</string>
+    <string name="InfoPlist_NSLocationWhenInUseUsageDescription">RDT Chat זקוקה להרשאה לשתף את המיקום שלך למשך הזמן שבו הפכת את שיתוף המיקום לזמין.</string>
+    <string name="InfoPlist_NSMicrophoneUsageDescription">RDT Chat משתמשת במיקרופון שלך כדי להקליט ולשלוח הודעות קוליות וסרטונים עם סאונד.</string>
+    <string name="InfoPlist_NSPhotoLibraryUsageDescription">RDT Chat תאפשר לכם לבחור אילו תמונות מהספרייה שלכם לשלוח.</string>
+    <string name="InfoPlist_NSPhotoLibraryAddUsageDescription">RDT Chat מבקש לשמור תמונות בספריית התמונות שלך.</string>
+    <string name="InfoPlist_NSFaceIDUsageDescription">RDT Chat יכולה להשתמש ב-Face ID כדי להגן על הפרופיל המקומי שלך, על יצירת הגיבוי ועל הגדרת המכשיר השני.</string>
 
     <!-- android specific strings, developers: please take care to remove strings that are no longer used! -->
     <string name="pref_instant_delivery">משלוח מיידי</string>
@@ -1290,7 +1290,7 @@
 
     <string name="pref_background_notifications_rationale">כדי לשמור על החיבור ולקבל הודעות ברקע, התעלם מהאופטימיזציות של הסוללה בשלב הבא.\n\nדלתא צ\'אט צורכת מעט משאבים ומקפידה לא לרוקן את הסוללה שלך.</string>
     <!-- disabling "Reliable service" will hide a the maybe annoying permanent-notification with the drawback that new-message-notifications get potentially unreliable -->
-    <string name="perm_enable_bg_reminder_title">לחץ כאן כדי לקבל הודעות בזמן ש- Delta Chat פועל ברקע.</string>
-    <string name="perm_enable_bg_already_done">כבר אישרת ל- Delta Chat לקבל הודעות ברקע.\n\nאם ההודעות עדיין לא מגיעות ברקע, אנא בדוק גם את הגדרות המערכת שלך.</string>
+    <string name="perm_enable_bg_reminder_title">לחץ כאן כדי לקבל הודעות בזמן ש- RDT Chat פועל ברקע.</string>
+    <string name="perm_enable_bg_already_done">כבר אישרת ל- RDT Chat לקבל הודעות ברקע.\n\nאם ההודעות עדיין לא מגיעות ברקע, אנא בדוק גם את הגדרות המערכת שלך.</string>
 
     </resources>

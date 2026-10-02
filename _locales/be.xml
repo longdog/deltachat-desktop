@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <!-- common strings without special context -->
-    <string name="app_name">Delta Chat</string>
+    <string name="app_name">RDT Chat</string>
     <string name="ok">ОК</string>
     <string name="cancel">Скасаваць</string>
     <string name="clear_search">Ачысціць пошук</string>
@@ -329,7 +329,7 @@
     <string name="share_invite_link_explain">Кожны, хто мае гэтую спасылку, зможа праглядзець ваш профіль і напісаць вам. Дзяліцеся ёю толькі з тымі, каму давяраеце.</string>
     <string name="invite_friends">Запрасіць сяброў</string>
     <!-- %1$s is replaced by the user's invitation link ("https://i.delta.chat/...") -->
-    <string name="invite_friends_text">Напішыце мне ў Delta Chat:\n%1$s</string>
+    <string name="invite_friends_text">Напішыце мне ў RDT Chat:\n%1$s</string>
     <string name="menu_copy_selection_to_clipboard">Капіяваць выбранае</string>
     <string name="menu_copy_link_to_clipboard">Капіяваць спасылку</string>
     <string name="menu_copy_text_to_clipboard">Капіяваць тэкст</string>
@@ -400,7 +400,7 @@
     <!-- Menu item beside an app/chat that adds an icon to the system's home screen. If the user taps that icon, the app/chat is opened directly. -->
     <string name="add_to_home_screen">Дадаць на галоўны экран</string>
     <string name="donate">Ахвяраваць</string>
-    <string name="donate_device_msg">❤️ Здаецца, вам падабаецца Delta Chat!\n\nРазгледзіце магчымасць зрабіць ахвяраванне, каб дапамагчы нам захаваць Delta Chat бясплатным для ўсіх.\n\nХоць выкарыстанне Delta Chat бясплатнае і зыходны код адкрыты, распрацоўка каштуе грошай. Дапамажыце нам захаваць незалежнасць Delta Chat і зрабіць яго яшчэ лепш у будучыні.\n\nhttps://delta.chat/donate</string>
+    <string name="donate_device_msg">❤️ Здаецца, вам падабаецца RDT Chat!\n\nРазгледзіце магчымасць зрабіць ахвяраванне, каб дапамагчы нам захаваць RDT Chat бясплатным для ўсіх.\n\nХоць выкарыстанне RDT Chat бясплатнае і зыходны код адкрыты, распрацоўка каштуе грошай. Дапамажыце нам захаваць незалежнасць RDT Chat і зрабіць яго яшчэ лепш у будучыні.\n\nhttps://delta.chat/donate</string>
 
     <string name="mute_for_one_hour">Не апавяшчаць 1 гадзіну</string>
     <string name="mute_for_eight_hours">Не апавяшчаць 8 гадзін</string>

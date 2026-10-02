@@ -2,6 +2,7 @@ import React, { PropsWithChildren } from 'react'
 
 import { runtime } from '@deltachat-desktop/runtime-interface'
 import { getLogger } from '@deltachat-desktop/shared/logger'
+import { appName } from '@deltachat-desktop/shared/constants'
 import { DialogContext } from '../../contexts/DialogContext'
 
 const log = getLogger('renderer/react-crashhandler')
@@ -97,7 +98,7 @@ export class RecoverableCrashScreen extends React.Component<
             </a>
           </p>
           <p>
-            DeltaChat Version: {VERSION} (git: {GIT_REF})
+            {appName} Version: {VERSION} (git: {GIT_REF})
           </p>
         </div>
       )

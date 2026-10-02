@@ -28,6 +28,7 @@ import {
   HIDDEN_THEME_PREFIX,
   parseThemeMetaData,
 } from '@deltachat-desktop/shared/themes.js'
+import { appName } from '@deltachat-desktop/shared/constants.js'
 
 import { MessageToBackend } from '../src/runtime-ws-protocol.js'
 
@@ -515,7 +516,7 @@ class BrowserRuntime implements Runtime {
     })
   }
   setBadgeCounter(value: number): void {
-    document.title = `DeltaChat${value ? `(${value})` : ''}`
+    document.title = `${appName}${value ? ` (${value})` : ''}`
   }
   deleteWebxdcAccountData(_accountId: number): Promise<void> {
     // not applicable in browser
