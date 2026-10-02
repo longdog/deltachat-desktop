@@ -83,8 +83,8 @@
 2. Run `pnpm prepare-release <version>`
 3. check and cleanup the changes added to CHANGELOG
 4. Open a PR for your branch and get it reviewed.
-5. The PR name 'Prepare release X.ZY' will trigger a preview build that can be announced to testers for having a pre release testing. It also creates a Windows release package.
-6. When the Windows package is created, create and upload the needed packages for Apple and Microsoft Store on the build machine
+5. The PR name 'Prepare release X.ZY' will trigger a preview build (Linux and macOS) that can be announced to testers for pre-release testing.
+6. Create and upload the needed packages for Apple and Microsoft Store on the build machine as needed.
 7. When the Store submissions are approved and you want to publish the release merge the prepare-release branch into `main`
 8. Checkout the latest version on `main`. Tag the latest commit
    with your version number:
@@ -92,6 +92,7 @@
    git tag v<version> # for example v2.23.0
    git push origin main --tags
    ```
+   Pushing the tag triggers the GitHub Actions workflow that builds the Windows portable `.exe` (artifact: `windows portable release`).
 9. Then run the release script on the build machine. It will create and upload all builds for download.delta.chat, create a release status issue and a [release](https://github.com/deltachat/deltachat-desktop/releases)
    draft on github which needs to be updated and published manually:
 

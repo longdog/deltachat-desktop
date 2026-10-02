@@ -1,16 +1,16 @@
-name: Build for windows store (appx unsigned)
+name: Build Windows portable (release)
 
 on:
   push:
-    branches:
-      - '*prepare-release*'
+    tags:
+      - 'v*'
 
 permissions: {}
 
 jobs:
-  upload-preview:
+  build-windows-portable:
     runs-on: windows-latest
-    name: Upload Preview
+    name: Build Windows portable
     steps:
       # Preperation
       - uses: actions/checkout@v6
@@ -28,6 +28,7 @@ jobs:
         shell: bash
         run: |
           VERSION=$(jq -r .version package.json)
+          echo "VERSION=${VERSION}" >> "$GITHUB_ENV"
           echo "VERSION_INFO_GIT_REF=v${VERSION}" >> "$GITHUB_ENV"
       # Building JS
       - name: pnpm install, build
@@ -40,24 +41,23 @@ jobs:
           pnpm run pack:patch-node-modules
       # Packaging and processing
       - name: WINDOWS electron builder
-        if: runner.os == 'Windows'
         env:
           NODE_ENV: production
         run: |
           cd packages/target-electron
           set DEBUG=electron-builder
-          pnpm electron-builder --win appx
+          pnpm electron-builder --win portable --config.artifactName="deltachat-desktop.$env:VERSION.portable.exe"
       - name: WINDOWS renaming / upload Preperation
         working-directory: packages/target-electron/dist
         run: |
           dir
           mkdir preview
-          move Delta*Chat*.appx preview/
+          move Delta*Chat*.exe preview/deltachat-desktop.$env:VERSION.portable.exe
           dir preview
           cd ..
       # Upload Step
       - name: Upload result to artifacts
         uses: actions/upload-artifact@main
         with:
-          name: windows appx release
+          name: windows portable release
           path: packages/target-electron/dist/preview/

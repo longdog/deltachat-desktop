@@ -21,7 +21,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest, macos-latest]
       fail-fast: false
     name: Build Preview
     env:
@@ -99,25 +99,6 @@ jobs:
           mv *.dmg preview/deltachat-desktop.$BRANCH.dmg || true
           cd ..
           ls dist/preview
-      - name: WINDOWS electron builder
-        if: runner.os == 'Windows'
-        env:
-          BRANCH: ${{ steps.prepare.outputs.branch }}
-        run: |
-          cd packages/target-electron
-          set DEBUG=electron-builder
-          pnpm electron-builder --win portable --config.artifactName="deltachat-desktop.$env:BRANCH.portable.exe"
-      - name: WINDOWS renaming / upload Preperation
-        if: runner.os == 'Windows'
-        working-directory: packages/target-electron/dist
-        env:
-          BRANCH: ${{ steps.prepare.outputs.branch }}
-        run: |
-          dir
-          mkdir preview
-          move Delta*Chat*.exe preview/deltachat-desktop.$env:BRANCH.portable.exe
-          dir preview
-          cd ..
       - name: Upload result to artifacts
         id: upload-github
         uses: actions/upload-artifact@main
@@ -174,7 +155,7 @@ jobs:
       - name: 'Post links to details'
         if: steps.upload.outcome == 'success'
         run: |
-          for platform in Linux macOS Windows; do
+          for platform in Linux macOS; do
             PLATFORM=$platform node ./bin/github-actions/postLinksToDetails.js
           done
         env:
