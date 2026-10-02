@@ -5,6 +5,7 @@ import { runtime } from '@deltachat-desktop/runtime-interface'
 import { BackendRemote } from '../backend-com'
 import { defaultCredentials, type Credentials } from '../components/Settings/DefaultCredentials'
 import { saveLastChatId } from './chat'
+import { persistBootstrapGroupChatId } from './accountBootstrapRestriction'
 import { updateDeviceChat } from '../deviceMessages'
 
 const log = getLogger('renderer/accountBootstrap')
@@ -94,6 +95,7 @@ export async function tryAccountBootstrapFromYaml(): Promise<AccountBootstrapRes
     )
 
     await saveLastChatId(accountId, groupChatId)
+    await persistBootstrapGroupChatId(accountId, groupChatId)
 
     log.info('Account bootstrap from account.yaml completed')
     return { ok: true, accountId }

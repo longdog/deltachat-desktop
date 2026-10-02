@@ -24,6 +24,7 @@ type Props = {
   onSearchClear: () => void
   queryStr: string
   queryChatId: number | null
+  hideChatListSearch?: boolean
 }
 
 export default function ChatListHeader({
@@ -35,6 +36,7 @@ export default function ChatListHeader({
   onSearchClear,
   queryStr,
   queryChatId,
+  hideChatListSearch = false,
 }: Props) {
   const tx = useTranslationFunction()
   const { openDialog } = useDialog()
@@ -114,7 +116,7 @@ export default function ChatListHeader({
           </div>
         </>
       )}
-      {!showArchivedChats && (
+      {!showArchivedChats && !hideChatListSearch && (
         <>
           <SearchInput
             id='chat-list-search'

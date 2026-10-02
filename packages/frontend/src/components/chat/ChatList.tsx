@@ -58,6 +58,10 @@ import { useMultiselect } from '../../hooks/useMultiselect'
 import { getLogger } from '@deltachat-desktop/shared/logger'
 import { useHasChanged2 } from '../../hooks/useHasChanged'
 import asyncThrottle from '@jcoreio/async-throttle'
+import {
+  filterChatListIdsForBootstrap,
+  type BootstrapChatListRestriction,
+} from '../../backend/accountBootstrapRestriction'
 
 const log = getLogger('ChatList')
 const useMultiselectLog = getLogger('ChatListMultiselect')
@@ -193,8 +197,11 @@ export default function ChatList(props: {
   queryChatId: number | null
   onExitSearch?: () => void
   onChatClick: (chatId: number) => void
+  bootstrapChatListRestriction: BootstrapChatListRestriction
 }) {
   const accountId = selectedAccountId()
+
+  const { bootstrapChatListRestriction } = props
 
   const {
     selectedChatId: activeChatId,
@@ -203,12 +210,22 @@ export default function ChatList(props: {
     queryStr,
     queryChatId,
   } = props
-  const isSearchActive = queryStr && queryStr !== ''
+  const isSearchActive = Boolean(queryStr && queryStr !== '')
 
-  const { chatListIds, isChatLoaded, loadChats, chatCache } = useLogicChatPart(
-    queryStr,
-    showArchivedChats
+  const { chatListIds: rawChatListIds, isChatLoaded, loadChats, chatCache } =
+    useLogicChatPart(queryStr, showArchivedChats)
+  const chatListIds = useMemo(
+    () =>
+      filterChatListIdsForBootstrap(
+        rawChatListIds,
+        bootstrapChatListRestriction
+      ),
+    [rawChatListIds, bootstrapChatListRestriction]
   )
+  const hideNewChatButton =
+    bootstrapChatListRestriction.status === 'singleChat'
+  const showExtendedSearchResults =
+    isSearchActive && bootstrapChatListRestriction.status !== 'singleChat'
 
   const qrSearchResult = useQrSearchResult(accountId, queryStr ?? '')
 
@@ -237,7 +254,7 @@ export default function ChatList(props: {
 
   // divider height ------------
   const chatsHeight = (height: number) =>
-    isSearchActive
+    showExtendedSearchResults
       ? Math.min(
           height / 3 - DIVIDER_HEIGHT,
           chatListIds.length * CHATLISTITEM_CHAT_HEIGHT
@@ -391,7 +408,7 @@ export default function ChatList(props: {
       <AutoSizer disableWidth>
         {({ height }) => (
           <>
-            {isSearchActive && showChatResults && (
+            {showExtendedSearchResults && showChatResults && (
               <div
                 id='search-result-divider-chats'
                 className='search-result-divider'
@@ -427,7 +444,7 @@ export default function ChatList(props: {
                     'aria-orientation': 'vertical',
                     'aria-multiselectable': multiselect != undefined,
 
-                    'aria-labelledby': isSearchActive
+                    'aria-labelledby': showExtendedSearchResults
                       ? 'search-result-divider-chats'
                       : undefined,
                     // When `!isSearchActive`, the wrapper `<section>` label
@@ -448,9 +465,9 @@ export default function ChatList(props: {
                   {ChatListItemRowChat}
                 </ChatListPart>
               </div>
-              {isSearchActive && (
+              {showExtendedSearchResults && (
                 <ContactAndMessageSearchResults
-                  queryStr={queryStr}
+                  queryStr={queryStr ?? ''}
                   qrSearchResult={qrSearchResult}
                   onExitSearch={props.onExitSearch}
                   parentSectionHeight={height}
@@ -463,6 +480,7 @@ export default function ChatList(props: {
                 />
               )}
             </RovingTabindexProvider>
+            {!hideNewChatButton && (
             <button
               type='button'
               className='floating-action-button'
@@ -479,6 +497,7 @@ export default function ChatList(props: {
                 }}
               ></div>
             </button>
+            )}
           </>
         )}
       </AutoSizer>

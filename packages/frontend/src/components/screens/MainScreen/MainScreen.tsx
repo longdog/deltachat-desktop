@@ -26,6 +26,7 @@ import { ScreenContext } from '../../../contexts/ScreenContext'
 import MediaView from '../../dialogs/MediaView'
 import { useWebxdcMessageSentListener } from '../../../hooks/useWebxdcMessageSent'
 
+import { useBootstrapChatListRestriction } from '../../../backend/accountBootstrapRestriction'
 import CreateChat from '../../dialogs/CreateChat'
 import CommandPalette from '../../dialogs/CommandPalette'
 import asyncThrottle from '@jcoreio/async-throttle'
@@ -44,6 +45,10 @@ export default function MainScreen({ accountId }: Props) {
   useSelectLastChat(accountId)
 
   useSelfNotInGroupToast(accountId)
+
+  const bootstrapChatListRestriction = useBootstrapChatListRestriction(accountId)
+  const bootstrapSingleChatMode =
+    bootstrapChatListRestriction.status === 'singleChat'
 
   const tx = useTranslationFunction()
 
@@ -132,6 +137,9 @@ export default function MainScreen({ accountId }: Props) {
 
   const { openDialog } = useDialog()
   useKeyBindingAction(KeybindAction.NewChat_Open, () => {
+    if (bootstrapSingleChatMode) {
+      return
+    }
     // Same as `onCreateChat` in ChatList.
     openDialog(CreateChat)
   })
@@ -264,6 +272,17 @@ export default function MainScreen({ accountId }: Props) {
     SettingsStoreInstance.effect.load()
   }, [accountId])
 
+  useEffect(() => {
+    if (bootstrapSingleChatMode && (queryStr.length > 0 || queryChatId !== null)) {
+      handleSearchClear()
+    }
+  }, [
+    bootstrapSingleChatMode,
+    handleSearchClear,
+    queryChatId,
+    queryStr.length,
+  ])
+
   const isSearchActive = queryStr.length > 0 || queryChatId !== null
   const showArchivedChats = !isSearchActive && archivedChatsSelected
 
@@ -304,6 +323,7 @@ export default function MainScreen({ accountId }: Props) {
             onSearchClear={handleSearchClear}
             queryStr={queryStr}
             queryChatId={queryChatId}
+            hideChatListSearch={bootstrapSingleChatMode}
           />
           <ChatList
             queryStr={queryStr}
@@ -311,6 +331,7 @@ export default function MainScreen({ accountId }: Props) {
             onChatClick={onChatClick}
             selectedChatId={chatId ?? null}
             queryChatId={queryChatId}
+            bootstrapChatListRestriction={bootstrapChatListRestriction}
             onExitSearch={() => {
               setQueryStr('')
               setQueryChatId(null)
