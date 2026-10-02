@@ -10,6 +10,10 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 // this can be changed by ../../../bin/github-actions/devbuild.js
 const previewBuild = false
 
+const packageJson = JSON.parse(
+  readFileSync(join(__dirname, '../package.json'), { encoding: 'utf-8' })
+)
+
 const exclude_list = readFileSync(
   join(__dirname, 'packageignore_list'),
   'utf-8'
@@ -49,12 +53,13 @@ if (previewBuild) {
   build.extraMetadata.name = appName
   //@ts-ignore
   build.extraMetadata.productName = 'DeltaChat-DevBuild'
-  const p = JSON.parse(
-    readFileSync(join(__dirname, '../package.json'), { encoding: 'utf-8' })
-  )
   //@ts-ignore
-  build.extraMetadata.version = p.version + '-DevBuild'
+  build.extraMetadata.version = packageJson.version + '-DevBuild'
 }
+
+// Must match packages/target-electron/package.json so Windows exe naming and
+// afterPack fuse application use the same product filename.
+build.productName = previewBuild ? 'DeltaChat-DevBuild' : packageJson.productName
 
 //@ts-ignore
 build.extraMetadata.desktopName = `${appName}.desktop`

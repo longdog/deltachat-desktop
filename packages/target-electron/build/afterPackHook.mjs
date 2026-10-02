@@ -1,4 +1,4 @@
-import { copyFileSync, existsSync } from 'fs'
+import { copyFileSync, existsSync, readFileSync } from 'fs'
 import { flipFuses, FuseVersion, FuseV1Options } from '@electron/fuses'
 import { readdir, writeFile, rm, cp, mkdir } from 'fs/promises'
 import { join, dirname } from 'path'
@@ -171,7 +171,48 @@ async function deleteNotNeededPrebuildsFromUnpackedASAR(
   }
 }
 
+async function resolveWindowsExecutablePath(context, sourceDir) {
+  const appOutDir = context.appOutDir
+  const candidates = [
+    join(appOutDir, `${context.packager.appInfo.productFilename}.exe`),
+  ]
+
+  const packageJson = JSON.parse(
+    readFileSync(join(sourceDir, 'package.json'), 'utf-8')
+  )
+  if (packageJson.productName) {
+    candidates.push(join(appOutDir, `${packageJson.productName}.exe`))
+  }
+
+  for (const candidate of candidates) {
+    if (existsSync(candidate)) {
+      return candidate
+    }
+  }
+
+  const files = await readdir(appOutDir)
+  const exes = files.filter(
+    file =>
+      file.toLowerCase().endsWith('.exe') &&
+      !/^uninstall/i.test(file) &&
+      file.toLowerCase() !== 'elevate.exe'
+  )
+
+  if (exes.length === 1) {
+    return join(appOutDir, exes[0])
+  }
+
+  if (exes.length > 1) {
+    const mainExe =
+      exes.find(file => !/^electron\.exe$/i.test(file)) ?? exes[0]
+    return join(appOutDir, mainExe)
+  }
+
+  return null
+}
+
 async function setFuses(context) {
+  const source_dir = join(dirname(fileURLToPath(import.meta.url)), '..')
   // Skip fuse flipping for temporary arch-specific builds when creating a macOS universal build.
   // electron-builder creates separate arm64 and x64 builds in *-temp directories first,
   // then merges them. If we flip fuses on these temp builds, the CodeResources signatures
@@ -193,12 +234,12 @@ async function setFuses(context) {
   if (isMac) {
     appPath = `${context.appOutDir}/${productFilename}.app`
   } else if (context.electronPlatformName === 'win32') {
-    appPath = `${context.appOutDir}/${productFilename}.exe`
+    appPath = await resolveWindowsExecutablePath(context, source_dir)
   } else {
     appPath = `${context.appOutDir}/${context.packager.executableName ?? 'deltachat-desktop'}`
   }
 
-  if (!existsSync(appPath)) {
+  if (appPath == null || !existsSync(appPath)) {
     const files = await readdir(context.appOutDir)
 
     // Log the list of file names
@@ -207,7 +248,8 @@ async function setFuses(context) {
       console.log(file)
     })
     throw new Error(
-      'Could not apply electron fuses since target not exists: ' + appPath
+      'Could not apply electron fuses since target not exists: ' +
+        (appPath ?? `no .exe in ${context.appOutDir}`)
     )
   }
 
